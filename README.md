@@ -8,8 +8,8 @@ This repository contains a detailed analysis of UPI transaction data, implementi
 
 ## 🗂️ Repository Contents
 
-### 1. UPI_ANALYSIS.ipynb
-The main Jupyter notebook containing comprehensive UPI transaction analysis with the following components:
+### UPI_ANALYSIS.ipynb
+A comprehensive Google Colab notebook containing UPI transaction analysis with the following components:
 
 #### Data Analysis
 - **Data Loading & Exploration**: Reads UPI transaction data from `upi_data_enhanced.csv`
@@ -73,38 +73,14 @@ The notebook includes three key visualizations:
    - Regression line visualization
    - Correlation analysis
 
-### 2. Air-canvas.py
-A computer vision project implementing a virtual air canvas using OpenCV. This allows users to draw in the air using color tracking.
-
-**Features:**
-- Real-time webcam-based color detection
-- HSV color space trackbars for dynamic color adjustment
-- Multi-color drawing support (Blue, Green, Red, Yellow)
-- Clear canvas functionality
-- Separate windows for tracking, painting, and mask visualization
-
-**Technical Implementation:**
-- Color detection using HSV thresholding
-- Contour detection for pointer identification
-- Morphological operations (erosion, dilation, opening)
-- Deque-based point storage for smooth line drawing
-- Multiple color channels management
-
-**Note:** This file appears to be unrelated to the UPI analysis and may have been included accidentally.
-
 ## 🛠️ Technologies Used
 
-### Data Science & Machine Learning
 - **pandas**: Data manipulation and analysis
 - **numpy**: Numerical computations
 - **scikit-learn**: Linear Regression modeling
 - **matplotlib**: Data visualization
 - **seaborn**: Statistical data visualization
-
-### Computer Vision (Air-canvas.py)
-- **OpenCV (cv2)**: Image processing and computer vision
-- **numpy**: Array operations
-- **collections.deque**: Efficient point storage
+- **Google Colab**: Cloud-based notebook environment
 
 ## 📋 Requirements
 
@@ -114,13 +90,29 @@ numpy
 scikit-learn
 matplotlib
 seaborn
-opencv-python (for Air-canvas.py)
-jupyter
 ```
+
+**Note:** All libraries are pre-installed in Google Colab, so no installation is needed when running there.
 
 ## 🚀 Getting Started
 
-### Running the UPI Analysis
+### Running in Google Colab (Recommended)
+
+1. **Open the notebook:**
+   - Click the "Open in Colab" badge above, or
+   - Go to [Google Colab](https://colab.research.google.com/)
+   - Upload the `UPI_ANALYSIS.ipynb` file
+
+2. **Upload your data:**
+   - Create a folder named `sample_data` in the Colab file system
+   - Upload `upi_data_enhanced.csv` to this folder
+   - Or modify the file path in the notebook to match your data location
+
+3. **Run the analysis:**
+   - Execute cells sequentially from top to bottom
+   - All required libraries are pre-installed in Colab
+
+### Running Locally (Optional)
 
 1. **Install dependencies:**
    ```bash
@@ -135,26 +127,6 @@ jupyter
    ```bash
    jupyter notebook UPI_ANALYSIS.ipynb
    ```
-
-4. **Execute cells sequentially** to perform the complete analysis
-
-### Running Air Canvas
-
-1. **Install OpenCV:**
-   ```bash
-   pip install opencv-python
-   ```
-
-2. **Run the script:**
-   ```bash
-   python Air-canvas.py
-   ```
-
-3. **Controls:**
-   - Adjust HSV trackbars to calibrate color detection
-   - Use the colored marker in front of webcam to draw
-   - Click "CLEAR" button to reset canvas
-   - Press 'q' to quit
 
 ## 📈 Model Performance
 
@@ -195,7 +167,8 @@ Potential improvements:
 
 ## 📝 Notes
 
-- The notebook includes outputs and visualizations from previous runs
+- This project was developed in Google Colab for easy sharing and collaboration
+- The notebook includes saved outputs and visualizations from previous runs
 - Models assume the number of banks remains constant for next period forecasting
 - Month indexing is used for time series visualization
 - All financial values are rounded to 2 decimal places for clarity
